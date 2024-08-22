@@ -11,7 +11,7 @@ html{
 }
 /* MENU */
 .contenedor-header{
-    background: #1e2326;
+    background: black;
     position: fixed;
     width: 100%;
     top: 0;
@@ -50,8 +50,8 @@ html{
     color: #1CB698;
 }
 .nav-responsive{
-    background-color: #1CB698;
-    color:#fff;
+    background-color: white;
+    color:black;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
