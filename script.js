@@ -15,3 +15,12 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
+
+function mostrarCorreo() {
+    var correoDiv = document.getElementById('correo');
+    if (correoDiv.style.display === 'flex') {
+        correoDiv.style.display = 'none';
+    } else {
+        correoDiv.style.display = 'flex';
+    }
+}

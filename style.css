@@ -91,13 +91,17 @@ html{
     transform: translateY(-50%);
     top: 30%;
 }
-.inicio .contenido-banner img{
+.contenedor-img{
+    position: relative;
+    display: inline-block;
+}
+
+.contenedor-img img{
     margin-top: 40px;
-    border: 10px solid #ffffff;
     display: block;
     width: 85%;
     margin: auto;
-    border-radius: 100%;
+    border-bottom: 1px solid #ffffff;
 }
 .inicio .contenido-banner h1{
     margin-top: 40px;
@@ -120,6 +124,18 @@ html{
     margin: 40px 5px;
     font-size: 20px;
     transition: .3s;
+}
+.correo {
+    margin-top: -25px;
+    font-size: 18px;
+    color: #333;
+    background: white;
+    display: none;
+    border-radius: 30px;
+    height: 5%;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
 }
 .redes a:hover{
     background-color: rgba(255, 0, 0, 0.295);
@@ -426,6 +442,12 @@ footer .arriba{
     }
 }
 @media screen and (max-width:930px){
+    .logo{
+        width: 100%;
+    }
+    .contenedor-header header .logo a img {
+        width: 30vw;
+    }
     .sobremi .fila{
         display: block;
     }
@@ -454,11 +476,13 @@ footer .arriba{
     }
 
     .portfolio .galeria{
-        display: block;
+        display: flex;
         width: 100%;
+        
     }
     .portfolio .galeria .proyecto{
         max-width: 100%;
+        height: 20vh;
     }
     .portfolio .galeria .proyecto img{
         width: 100%;
