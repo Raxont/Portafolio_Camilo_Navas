@@ -90,6 +90,9 @@ html{
     z-index: 1;
     transform: translateY(-50%);
     top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
 }
 .contenedor-img{
     position: relative;
@@ -104,14 +107,13 @@ html{
     border-bottom: 1px solid #ffffff;
 }
 .inicio .contenido-banner h1{
-    margin-top: 40px;
     font-size: 42px;
     font-family: 'Righteous';
 }
-.inicio .contenido-banner h2{
-    font-size: 15px;
+.inicio .contenido-banner h3{
     font-weight: normal;
 }
+
 .redes a{
     color: #fff;
     display: inline-block;
@@ -121,7 +123,7 @@ html{
     width: 42px;
     height: 42px;
     line-height: 42px;
-    margin: 40px 5px;
+    margin: 10px 5px;
     font-size: 20px;
     transition: .3s;
 }
@@ -196,7 +198,9 @@ html{
 .sobremi .fila .col .contenedor-intereses{
     display: flex;
     flex-wrap: wrap;
+    padding: 10px 0;
 }
+
 .sobremi .fila .col .contenedor-intereses .interes{
     width: 100px;
     height: 100px;
@@ -207,13 +211,35 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: rgba(255, 0, 0, 0.295);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
 }
+
+.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: rgba(255, 0, 0, 0.295);
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.4); /* Agrega una sombra más grande y roja */
+}
+
 .sobremi .fila .col .contenedor-intereses .interes i{
     font-size: 30px;
     margin-bottom: 10px;
+    transition: color 1.5s ease, transform 1s ease;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover i{
+    color: red; 
+    transform: rotate(350deg); 
+}
+
+.sobremi .fila .col .contenedor-intereses .interes span{
+    font-size: 18px;
+    transition: color 1.5s ease;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover span{
+    color: red; 
 }
 .sobremi a {
     text-decoration: none;
@@ -288,6 +314,7 @@ html{
 }
 .curriculum .fila .derecha{
     border-left: 2px solid #252A2E;
+    padding: 0 30px ;
 }
 .curriculum .fila .item{
     padding: 25px;
@@ -317,7 +344,6 @@ html{
 }
 .curriculum .fila .der{
     border: 2px solid rgba(255, 0, 0, 0.295);
-    margin-left: 20px;
 }
 /* SECCION PORTFOLIO */
 .portfolio{
