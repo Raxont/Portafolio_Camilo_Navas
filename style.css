@@ -81,7 +81,7 @@ html{
 .inicio .contenido-banner{
     padding: 20px;
     background-color: #1e2326;
-    max-width: 350px;
+    max-width:20%;
     margin: auto;
     height: 64%;
     text-align: center;
@@ -474,6 +474,10 @@ footer .arriba{
     .contenedor-header header .logo a img {
         width: 30vw;
     }
+    .inicio .contenido-banner{
+        max-width: 80%;
+    }
+    
     .sobremi .fila{
         display: block;
     }
