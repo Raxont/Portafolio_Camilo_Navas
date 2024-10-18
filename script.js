@@ -26,11 +26,12 @@ function mostrarCorreo() {
 }
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Previene la recarga de la página
+    event.preventDefault();
 
     emailjs.sendForm("service_fxfoxxu","template_tpau2qt", this)
     .then(function() {
         alert('El mensaje ha sido enviado correctamente!');
+        document.getElementById('contact-form').reset();
     }, function(error) {
         alert('Ha ocurrido un error al enviar el mensaje. Por favor, intenta nuevamente.', error);
     });
