@@ -81,7 +81,7 @@ html{
 .inicio .contenido-banner{
     padding: 20px;
     background-color: #1e2326;
-    max-width:20%;
+    width:20vw;
     margin: auto;
     height: 64%;
     text-align: center;
@@ -98,11 +98,11 @@ html{
     position: relative;
     display: inline-block;
 }
-
 .contenedor-img img{
     margin-top: 40px;
     display: block;
-    width: 85%;
+    width: 90%;
+    height: 40vh;
     margin: auto;
     border-bottom: 1px solid #ffffff;
 }
@@ -113,7 +113,6 @@ html{
 .inicio .contenido-banner h3{
     font-weight: normal;
 }
-
 .redes a{
     color: #fff;
     display: inline-block;
@@ -123,13 +122,12 @@ html{
     width: 42px;
     height: 42px;
     line-height: 42px;
-    margin: 10px 5px;
+    margin: 0px 8px;
     font-size: 20px;
     transition: .3s;
 }
 .correo {
-    margin-top: -25px;
-    font-size: 18px;
+    font-size: 1rem;
     color: #333;
     background: white;
     display: none;
@@ -138,6 +136,10 @@ html{
     width: 60%;
     justify-content: center;
     align-items: center;
+}
+.correo-texto{
+    text-decoration: none;
+    color: black;
 }
 .redes a:hover{
     background-color: rgba(255, 0, 0, 0.295);
@@ -202,7 +204,7 @@ html{
 }
 
 .sobremi .fila .col .contenedor-intereses .interes{
-    width: 100px;
+    width: 110px;
     height: 100px;
     background-color: #252A2E;
     border-radius: 10px;
@@ -345,6 +347,7 @@ html{
 .curriculum .fila .der{
     border: 2px solid rgba(255, 0, 0, 0.295);
 }
+
 /* SECCION PORTFOLIO */
 .portfolio{
     background-color: #252A2E;
@@ -405,6 +408,93 @@ html{
 .portfolio .galeria .proyecto .overlay:hover h3{
     margin-bottom: 0px;
 }
+
+/* SECCION CONTACTO */
+.contacto{
+    background-image: url(img/contact_bg.png);
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+.contacto .col img{
+    width: 100%;
+}
+.contacto .col .info{
+    position: absolute;
+    top: 40%;
+    background-color: #252A2E;
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contacto .col .info ul{
+    list-style: none;
+}
+.contacto .col .info ul li{
+    margin-bottom: 20px;
+}
+.contacto .col .info ul li i{
+    color: #1CB698;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* FOOTER */
 footer{
     background-color: #252A2E;
     color: #fff;
@@ -444,7 +534,22 @@ footer .arriba{
     font-size: 18px;
 }
 /* SECCION RESPONSIVE */
-@media screen and (max-width:1320px){
+@media screen and (max-width:1515px){
+    .inicio .contenido-banner{
+        width: 30vw;
+        top: 30%;
+    }
+    .contenedor-img img{
+        width: 80%;
+        height: 35vh;
+    }
+}
+@media screen and (max-width:1007px){
+    .inicio .contenido-banner{
+        width: 40vw;
+        height: 60%;
+        top: 30%;
+    }
     nav{
         display: none;
     }
@@ -466,8 +571,6 @@ footer .arriba{
         border-bottom: 1px solid #fff;
         padding: 10px 0;
     }
-}
-@media screen and (max-width:930px){
     .logo{
         width: 100%;
     }
@@ -522,5 +625,45 @@ footer .arriba{
     }
     .contacto .fila .col{
         width: 100%;
+    }
+}
+@media screen and (max-width:760px){
+    .inicio .contenido-banner{
+        width: 70vw;
+        height: 60%;
+        top: 30%;
+    }
+    .contenedor-img img{
+        width: 50%;
+        height: 30vh;
+    }
+}
+@media screen and (max-width:430px){
+    .inicio .contenido-banner{
+        width: 80vw;
+        height: 60%;
+        top: 30%;
+    }
+    .contenedor-img img{
+        width: 60%;
+        height: 30vh;
+    }
+    .redes a{
+        margin: 0px 2px;
+    }
+}
+
+@media screen and (max-width:376px){
+    .inicio .contenido-banner{
+        width: 95vw;
+        height: 60%;
+        top: 30%;
+    }
+    .contenedor-img img{
+        width: 60%;
+        height: 25vh;
+    }
+    .correo{
+        width: 80%;
     }
 }

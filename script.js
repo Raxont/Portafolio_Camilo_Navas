@@ -24,3 +24,14 @@ function mostrarCorreo() {
         correoDiv.style.display = 'flex';
     }
 }
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Previene la recarga de la página
+
+    emailjs.sendForm("service_fxfoxxu","template_tpau2qt", this)
+    .then(function() {
+        alert('El mensaje ha sido enviado correctamente!');
+    }, function(error) {
+        alert('Ha ocurrido un error al enviar el mensaje. Por favor, intenta nuevamente.', error);
+    });
+});

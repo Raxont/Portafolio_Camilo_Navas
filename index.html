@@ -8,6 +8,10 @@
     <title>Portafolio Camilo Navas</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('pEnxloumMnyMe6sZz')
+    </script>
 </head>
 <body>
     <!-- MENU ENCABEZADO -->
@@ -23,6 +27,7 @@
                     <li><a href="#mision_vision" onclick="seleccionar()">MISIÓN Y VISIÓN</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
                     <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -42,16 +47,18 @@
                 <img src="img/Diseño sin título.png" alt="Foto de perfil">
             </div>
             <h1>Camilo Navas</h1>
-            <h3>Desarrollador backend</h3>
+            <h3>Desarrollador Full Stack</h3>
             <p>" Transformo ideas en soluciones tecnológicas que dejan huella "</p>
             <div class="redes">
                 <a href="#" onclick="mostrarCorreo()"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/camilo-navas/"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/Raxont" onclick="mostrarCorreo()"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/camilo-navas/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/Raxont" target="_blank" onclick="mostrarCorreo()"><i class='bx bxl-github'></i></a>
                 <a href="tel:+573186410150"><i class='bx bx-phone'></i></a>
             </div>
             <div id="correo" class="correo">
-                raxonti@gmail.com
+                <a href="mailto:raxonti@gmail.com" target="_blank" class="correo-texto">
+                    raxonti@gmail.com
+                </a>
             </div>
         </div>
     </section>
@@ -61,11 +68,9 @@
         <div class="contenido-seccion">
             <h2>Sobre mí</h2>
             <p>
-                Soy entusiasta de impulsar proyectos mediante el trabajo en equipo, la lógica y la creatividad. 
-                He contribuido en la creación de proyectos destacados, como una tienda de ropa para compras en línea, una base de datos de zoológicos y polideportivos, y uno de los proyectos que más ha aportado a mi conocimiento es un cine, en el que he podido poner en práctica la mayoría de mis habilidades. 
-                La importancia de la colaboración y la entrega puntual de soluciones que satisfagan las necesidades del cliente subraya el cumplimiento de mis logros. 
-                Busco una constante adquisición de conocimientos y campos de aplicación donde pueda ejercerlos. 
-                Innovar y mejorar procesos contribuyen a mi éxito, crecimiento personal y profesional.
+                Impulso proyectos mediante trabajo en equipo, lógica y creatividad. 
+                He contribuido a la creación de proyectos destacados, sobresaliendo por mi colaboración y la entrega puntual de soluciones que satisfacen las necesidades del cliente, con un enfoque en el cumplimiento de objetivos. 
+                Aprendo de manera constante, lo que me permite innovar y mejorar procesos que contribuyen al éxito y crecimiento tanto personal como profesional.    
             </p>
             <div class="fila">
                 <!-- intereses -->
@@ -83,7 +88,7 @@
                         </div>
                         <div class="interes">
                             <i class='bx bxl-javascript' ></i>
-                            <span>Java Script</span>
+                            <span>JavaScript</span>
                         </div>
                     </div>
                     <h4>Back end lenguajes</h4>
@@ -93,12 +98,19 @@
                             <span>C++</span>
                         </div>
                         <div class="interes">
-                            <i class='bx bxl-nodejs' ></i>
-                            <span>Node.js</span>
+                            <i class='bx bxl-typescript'></i>
+                            <span>TypeScript</span>
                         </div>
                         <div class="interes">
                             <i class='bx bxl-python' ></i>
                             <span>Phyton</span>
+                        </div>
+                    </div>
+                    <h4>Entorno de ejecucion</h4>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class='bx bxl-nodejs' ></i>
+                            <span>Node.js</span>
                         </div>
                     </div>
                     <h4>Base de datos</h4>
@@ -112,12 +124,50 @@
                             <span>MongoDB</span>
                         </div>
                     </div>
-                    <h4>Frameworks y servidores</h4>
+                    <h4>Frameworks</h4>
                     <div class="contenedor-intereses">
                         <div class="interes">
                             <i class='bx bxs-file-js' ></i>
                             <span>Express.js</span>
                         </div>
+                        <div class="interes">
+                            <i class='bx bx-rocket' ></i>
+                            <span>Astro</span>
+                        </div>
+                        <div class="interes">
+                            <i class='bx bxl-tailwind-css' ></i>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                    <h4>Bibliotecas</h4>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class='bx bxl-react' ></i>
+                            <span>React</span>
+                        </div>
+                    </div>
+                    <h4>Servidores</h4>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class='bx bxl-aws' ></i>
+                            <span>AWS - EC2</span>
+                        </div>
+                        <div class="interes">
+                            <i class='bx bxl-aws' ></i>
+                            <span>AWS - RDS</span>
+                        </div>
+                        <div class="interes">
+                            <i class='bx bxl-aws' ></i>
+                            <span>AWS - S3</span>
+                        </div>
+                        <div class="interes">
+                            <i class='bx bxl-aws' ></i>
+                            <span>AWS -</span>
+                            <span>Lambda</span>
+                        </div>
+                    </div>
+                    <h4>Contenedores</h4>
+                    <div class="contenedor-intereses">
                         <div class="interes">
                             <i class='bx bxl-docker' ></i>
                             <span>Docker</span>
@@ -165,7 +215,7 @@
                             Auto Aprendizaje
                         </li>
                     </ul>
-                    <a href="./img/CV Camilo Navas 2024.pdf" download>
+                    <a href="./img/CV.pdf" download>
                         <button>
                             Descargar hoja de vida <i class="fa-solid fa-download"></i>
                             <span class="overlay"></span>
@@ -299,17 +349,42 @@
         </div>
     </section>
 
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <form id="contact-form">
+                        <input type="text" name="user_name" placeholder="Nombre" required>
+                        <input type="text" name="user_phone" placeholder="Número telefónico" required>
+                        <input type="email" name="user_email" placeholder="Correo" required>
+                        <input type="text" name="subject" placeholder="Tema" required>
+                        <textarea name="message" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                        <button type="submit">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- footer -->
     <footer>
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
         </a>
         <div class="redes">
-            <a href="mailto:raxonti@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/camilo-navas/"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://github.com/Raxont" onclick="mostrarCorreo()"><i class='bx bxl-github'></i></a>
             <a href="tel:+573186410150"><i class='bx bx-phone'></i></a>
         </div>
+        
     </footer>
 
     <script src="script.js"></script>
