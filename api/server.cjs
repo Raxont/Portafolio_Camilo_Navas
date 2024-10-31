@@ -7,7 +7,6 @@ const path = require('path');
 const app = express();
 const frontendApp = express();
 
-process.loadEnvFile();
 const front = `${process.env.HOST}:${process.env.PORT_FRONTEND}`
 const back = `${process.env.HOST}:${process.env.PORT_BACKEND}`
 const puertoBack = process.env.PORT_BACKEND
