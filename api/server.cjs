@@ -7,8 +7,20 @@ const path = require('path');
 const app = express();
 const frontendApp = express();
 
+process.loadEnvFile();
+const front = `${process.env.HOST}:${process.env.PORT_FRONTEND}`
+const back = `${process.env.HOST}:${process.env.PORT_BACKEND}`
+const puertoBack = process.env.PORT_BACKEND
+
+const corsConfig = cors({
+    origin: front,
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type", "Authorization", "x-version"], 
+});
+
+
 // Middleware
-app.use(cors());
+app.use(corsConfig);
 app.use(bodyParser.json());
 
 // Configuración de Nodemailer
@@ -41,8 +53,8 @@ app.post('/send-email', (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(process.env.PORT_BAKCEND, () => {
-    console.log(`Servidor corriendo en el puerto ${process.env.HOST}:${process.env.PORT_BAKCEND}`);
+app.listen(puertoBack, () => {
+    console.log(`Servidor corriendo en el puerto ${back}`);
 });
 
 // Configurar el servidor para el frontend
@@ -55,5 +67,5 @@ frontendApp.get('/', (req, res) => {
 
 // Iniciar el servidor del frontend
 frontendApp.listen(process.env.PORT_FRONTEND, () => {
-    console.log(`Servidor de frontend corriendo en ${process.env.HOST}:${process.env.PORT_FRONTEND}`);
+    console.log(`Servidor de frontend corriendo en ${front}`);
 });

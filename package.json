@@ -5,8 +5,8 @@
   "type": "module",
   "main": "script.js",
   "scripts": {
-    "start": "node ./api/server.cjs", 
-    "dev": "node --watch --env-file .env ./api/server.cjs"
+    "start": "node server.cjs",
+    "dev": "node --watch ./api/server.cjs"
   },
   "keywords": [],
   "author": "",
