@@ -35,7 +35,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         message: this.message.value
     };
 
-    fetch(`http://localhost:3001/send-email`, {
+    fetch(`https://backend-portfolio-wszv.onrender.com/send-email`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
