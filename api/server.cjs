@@ -7,7 +7,7 @@ const app = express();
 const puertoBack = process.env.PORT_BACKEND
 
 app.use(cors({
-    origin: "https://backend-portfolio-wszv.onrender.com",
+    origin: "https://raxo.netlify.app",
       methods: ["GET", "POST", "PUT", "DELETE"],
       allowedHeaders: ["Content-Type", "Authorization", "x-version"], 
 }));
