@@ -2,24 +2,15 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const path = require('path');
 
 const app = express();
-const frontendApp = express();
-
-
 const puertoBack = process.env.PORT_BACKEND
-const puertoFront = process.env.PORT_FRONTEND
 
-const corsConfig = cors({
+app.use(cors({
     origin: "https://backend-portfolio-wszv.onrender.com",
       methods: ["GET", "POST", "PUT", "DELETE"],
       allowedHeaders: ["Content-Type", "Authorization", "x-version"], 
-});
-
-
-// Middleware
-app.use(corsConfig);
+}));
 app.use(bodyParser.json());
 
 // Configuración de Nodemailer
@@ -54,17 +45,4 @@ app.post('/send-email', (req, res) => {
 // Iniciar el servidor
 app.listen(puertoBack, () => {
     console.log(`Servidor de backend corriendo en el puerto ${puertoBack}`);
-});
-
-// Configurar el servidor para el frontend
-frontendApp.use(express.static(path.join(__dirname, '../src')));
-
-// Servir el archivo index.html
-frontendApp.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/index.html'));
-});
-
-// Iniciar el servidor del frontend
-frontendApp.listen(puertoFront, () => {
-    console.log(`Servidor de frontend corriendo en el puerto ${puertoFront}`);
 });
